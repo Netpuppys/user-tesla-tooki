@@ -1,0 +1,174 @@
+.completed-order-card-div{
+    width: 100%;
+
+    background: linear-gradient(89.79deg, #FFFFFF -2.03%, rgba(230, 255, 232, 0.75) 50.93%, #FFFFFF 99.82%);
+
+    -webkit-box-shadow: 0px 10px 27px -11px rgba(18,16,16,1);
+    -moz-box-shadow: 0px 10px 27px -11px rgba(18,16,16,1);
+    box-shadow: 0px 10px 27px -11px rgba(18,16,16,1);
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+    padding: 15px 10px;
+}
+
+.completed-order-card-div
+.top-div{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.completed-order-card-div
+.top-div
+.driver-profile-img{
+    width: 50px;
+}
+
+.completed-order-card-div
+.top-div
+.main-info-text{
+    margin-right: auto;
+    font-size: 19.52px;
+    font-weight: 500;
+    line-height: 29.93px;
+    text-align: left;
+
+    span{
+        font-size: 15.61px;
+    }
+}
+
+.completed-order-card-div
+.top-div
+.order-price{
+    font-size: 19.52px;
+    font-weight: 600;
+    line-height: 29.93px;
+    text-align: left;
+
+    color: #151515;
+}
+
+.completed-order-card-div
+.location-points-div{
+    margin-top: 15px;
+    width: 80%;
+    margin-inline: 10%;
+
+    background-color: #fff;
+    border-radius: 20px;
+
+    -webkit-box-shadow: 0px 10px 27px -11px rgba(18,16,16,1);
+    -moz-box-shadow: 0px 10px 27px -11px rgba(18,16,16,1);
+    box-shadow: 0px 10px 27px -11px rgba(18,16,16,1);
+
+    box-sizing: border-box;
+    padding: 15px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.completed-order-card-div
+.location-points-div
+.location-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    color: #28C928;
+}
+
+.completed-order-card-div
+.location-points-div
+.location-div
+.pin{
+    font-size: 25px;
+}
+
+.completed-order-card-div
+.location-points-div
+.location-div
+.location-text{
+    font-size: 23.42px;
+    font-weight: 500;
+    line-height: 29.93px;
+    text-align: left;
+
+    span{
+        display: block;
+        font-size: 15.61px;
+        font-weight: 500;
+        line-height: 29.93px;
+        text-align: left;
+        color: #9E9E9E;
+
+    }
+}
+
+.completed-order-card-div
+.location-points-div
+.red-pin{
+    color: #F95426;
+}
+
+.completed-order-card-div
+.options-div{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.completed-order-card-div
+.options-div
+.order-status{
+    color: #28C928;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span{
+        font-size: 17.82px;
+        font-weight: 400;
+        line-height: 18.63px;
+        text-align: center;
+    }
+}
+
+.completed-order-card-div
+.book-again-btn{
+    width: 130px;
+    height: 40px;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: none;
+
+    background: linear-gradient(0deg, #FF6B17, #FF6B17),
+    linear-gradient(135.01deg, #FB331A 4.08%, #F76C2E 99.07%);
+
+    font-size: 17.82px;
+    font-weight: 400;
+    line-height: 18.63px;
+    text-align: center;
+}
