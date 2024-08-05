@@ -66,9 +66,9 @@ const InfoLeft = ({ courierSize, selectedType, setSelectedType }) => {
 
   return (
     <div className='info-left'>
-        <p className='page-title'>
+        {/* <p className='page-title'>
             Calculate Parcel
-        </p>
+        </p> */}
         <p className='page-note'>
             {noteText}
         </p>

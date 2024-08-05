@@ -12,7 +12,10 @@ const LoginPage = () => {
   const { setUserId } = useUserContext()
   const navigate = useNavigate()
 
+  const [ loader, setLoader ] = useState(false)
+
   const onSubmit = (data) => {
+    setLoader(true)
       const loginData = {
           email: data.email,
           password: data.password,
@@ -31,6 +34,9 @@ const LoginPage = () => {
           .catch(err => {
               console.log(err)
           })
+          .finally(() => {
+            setLoader(false)
+          })
   };
 
   const goToSignUp = () => {
@@ -43,11 +49,13 @@ const LoginPage = () => {
         goToSignUp={goToSignUp}
         onSubmit={onSubmit}
         setUserId={setUserId}
+        loader={loader}
       /> : 
       <Login 
         goToSignUp={goToSignUp}
         onSubmit={onSubmit}
         setUserId={setUserId}
+        loader={loader}
       />}
     </>
   )

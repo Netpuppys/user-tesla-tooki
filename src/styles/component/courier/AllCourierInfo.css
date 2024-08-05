@@ -180,11 +180,11 @@
 .courier-info-main-div
 .info-left{
     width: 100%;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
     padding-top: 20px;
     box-sizing: border-box;
 
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -464,7 +464,7 @@
     .courier-info-main-div{
         width: 100%;
         height: 100%;
-        min-height: 100vh;
+        /* min-height: 100vh; */
     
         border-radius: 3.5rem;
     
@@ -478,15 +478,15 @@
     .info-div-container{
         width: 100%;
         height: 100%;
-        min-height: 100vh;
 
         box-sizing: border-box;
-        padding-top: 50px;
+        padding-top: 2rem;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 2rem;
     }
 
     .courier-info-main-div
@@ -745,7 +745,7 @@
     .courier-info-main-div
     .info-left{
         width: 100%;
-        padding-bottom: 175px;
+        /* padding-bottom: 175px; */
         padding-top: 25px;
         padding-inline: 50px;
         box-sizing: border-box;
@@ -959,6 +959,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
+        height: 5rem;
         box-sizing: border-box;
     
         padding-top: 23px;
@@ -966,7 +967,7 @@
         padding-inline: 61px;
     
         border-radius: 55px 55px 0px 55px;
-        background: linear-gradient(90deg, #FFEFEA 77.44%, rgba(255, 255, 255, 0.21) 127.82%);
+        background: transparent;
     }
     
     .courier-info-main-div

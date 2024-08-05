@@ -7,8 +7,24 @@ import Background from '../Tutorial/component/Background'
 import "../../styles/component/login/Login.css"
 import axiosInstance from '../../utils/axiosInstance';
 import { useUserContext } from '../../globalComponent/context/UserContext';
+import { ThreeDots } from 'react-loader-spinner';
 
-const Login = ({ goToSignUp, onSubmit }) => {
+const Loader = () => {
+    return (
+        <ThreeDots
+            visible={true}
+            height="80"
+            width="80"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+        />
+    )
+}
+
+const Login = ({ goToSignUp, onSubmit, loader }) => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const [showPassword, setShowPassword] = useState(false)
 
@@ -72,7 +88,7 @@ const Login = ({ goToSignUp, onSubmit }) => {
                 </div>
 
                 <button type="submit" className="main-login-btn">
-                    Login
+                    {loader? <Loader /> : "Login"}
                 </button>
             </form>
 

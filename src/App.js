@@ -10,8 +10,11 @@ import { MobileProvider } from './globalComponent/context/MobileContext';
 import CourierPage from './pages/CourierPage';
 import VerificationPage from './pages/VerificationPage';
 import DriverHomePage from './pages/DriverHomePage';
-import UserProfile from './assets/UserProfile/UserProfile';
+import UserProfile from './components/UserProfile/UserProfile';
 import { UserProvider } from './globalComponent/context/UserContext';
+import ReviewPage from './pages/ReviewPage';
+import PreviousOrders from './components/previousOrders/PreviousOrders';
+import BookAgainPage from './pages/BookAgainPage';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -53,6 +56,9 @@ function App() {
             <Route path='/profile' element={<UserProfile />} />
             <Route path='/courier/*' element={<CourierPage />} />
             <Route path='/verification/*' element={<VerificationPage />} />
+            <Route path='/book/*' element={<BookAgainPage />} />
+            <Route path='/review' element={<ReviewPage />} />
+            <Route path='/order-history' element={<PreviousOrders />} />
           </Routes>
         </Router>
       )}

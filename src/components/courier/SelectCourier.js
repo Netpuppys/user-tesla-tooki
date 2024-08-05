@@ -13,6 +13,7 @@ import DocumentSelector from './component/DocumentSelector'
 import "../../styles/component/courier/SelectCourier.css"
 import { useMobile } from '../../globalComponent/context/MobileContext'
 import Navigator from '../../globalComponent/navigator/Navigator'
+import MobileBackground from '../../globalComponent/ui/MobileBackground'
 
 const courierTypes = [
     { name: "Document", icon: documentIcon },
@@ -53,10 +54,10 @@ const SelectCourier = () => {
     }
 
   return (
-    <Background noBg={isMobile && true} flipped={true} image={selectCourierHero}>
+    <MobileBackground title={"Select Courier"}>
         <div className='select-courier-main-div'>
 
-            {isMobile && <Navigator pageTitle={"Select Courier"} />}
+            {/* {isMobile && <Navigator pageTitle={"Select Courier"} />} */}
 
             <div className='mobile-image-div'>
                 <img
@@ -124,7 +125,7 @@ const SelectCourier = () => {
 
             <GradientBtn text={"Continue"} onClickHandler={handleContinue} />
         </div>
-    </Background>
+    </MobileBackground>
   )
 }
 

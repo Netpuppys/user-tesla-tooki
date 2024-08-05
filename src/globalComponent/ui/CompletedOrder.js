@@ -3,6 +3,7 @@ import { FaMapPin } from "react-icons/fa";
 import { GiCheckMark } from "react-icons/gi";
 import bikePlaceholder from "../../assets/placeholder/bikePlaceholder.png"
 import "../../styles/globalComponent/CompletedOrder.css"
+import LocationSelections from './LocationSelections';
 
 const CompletedOrder = ({ pickupLocation, dropLocation, orderDate, orderTime, orderPrice, vehicleType }) => {
     const vehicle = vehicleType || "--"
@@ -31,27 +32,11 @@ const CompletedOrder = ({ pickupLocation, dropLocation, orderDate, orderTime, or
             </p>
         </div>
 
-        <div className='location-points-div'>
-
-            <div className='location-div red-pin'>
-                <p className='pin'>
-                    <FaMapPin />
-                </p>
-                <p className='location-text'>
-                    Pickup Point
-                    <span>{pickup}</span>
-                </p>
-            </div>
-
-            <div className='location-div'>
-                <p className='pin'>
-                    <FaMapPin />
-                </p>
-                <p className='location-text'>
-                    Drop Point
-                    <span>{drop}</span>
-                </p>
-            </div>
+        <div className='w-full px-10 py-4'>
+            <LocationSelections
+                pickUp={pickup}
+                drop={drop}
+            />
         </div>
 
         <div className='options-div'>

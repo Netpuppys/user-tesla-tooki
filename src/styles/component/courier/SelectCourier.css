@@ -179,7 +179,6 @@ span{
         width: 100%;
         box-sizing: border-box;
         padding-inline: 50px;
-        padding-top: 60px;
     
         display: flex;
         flex-direction: column;
@@ -190,6 +189,8 @@ span{
     .select-courier-main-div
     .mobile-image-div{
         display: block;
+        width: 100%;
+        padding: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -200,7 +201,7 @@ span{
     .hero-image-div{
         width: 100%;
         box-sizing: border-box;
-        padding: 60px 50px;
+        /* padding: 60px 50px; */
     }
     
     .select-courier-main-div

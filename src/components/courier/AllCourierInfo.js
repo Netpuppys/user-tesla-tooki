@@ -8,6 +8,7 @@ import InfoLeft from './component/InfoLeft';
 import "../../styles/component/courier/AllCourierInfo.css"
 import { useMobile } from '../../globalComponent/context/MobileContext';
 import Navigator from '../../globalComponent/navigator/Navigator';
+import MobileBackground from '../../globalComponent/ui/MobileBackground';
 
 const courierSize = [
     { name: "Small", width: 20, height: 20},
@@ -30,11 +31,10 @@ const AllCourierInfo = () => {
     }
 
   return (
-    <Background noBg={isMobile && true}>
+    <MobileBackground title={"Calculate Parcel"}>
         <div className='courier-info-main-div'>
             {!showMap &&
             <div className='info-div-container'>
-                {isMobile && <Navigator pageTitle={"Calculate Parcel"}/>}
 
                 {isMobile && 
                 <div className='map-main-container'>
@@ -111,7 +111,7 @@ const AllCourierInfo = () => {
                 </div>
             </div>}
         </div>
-    </Background>
+    </MobileBackground>
   )
 }
 

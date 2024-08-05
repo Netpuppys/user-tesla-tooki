@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GradientBtn = ({ onClickHandler, text}) => {
+const GradientBtn = ({ onClickHandler, text, styles }) => {
     const btnStyles = {
         width: '100%',
         height: '53px',
@@ -15,7 +15,8 @@ const GradientBtn = ({ onClickHandler, text}) => {
         fontSize: '27px',
         fontStyle: 'normal',
         fontWeight: '400',
-        lineHeight: '23px'
+        lineHeight: '23px',
+        ...styles
       };
 
       const btnHandler = () => {

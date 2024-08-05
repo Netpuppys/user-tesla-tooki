@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { useNavigate, useLocation } from "react-router-dom"
 import { FaMapPin } from "react-icons/fa";
-import mapBg from "../../assets/courierPage/mapBg.png"
+// import mapBg from "../../assets/courierPage/mapBg.png"
+import mapBg from "../../assets/background/mobileMap.png"
 import Background from '../Tutorial/component/Background'
 import GradientBtn from '../../globalComponent/ui/GradientBtn';
 import axiosInstance from '../../utils/axiosInstance';
 import "../../styles/component/courier/EnterLocation.css"
+import MobileBackground from '../../globalComponent/ui/MobileBackground';
 
 const EnterLocation = () => {
     const location = useLocation()
@@ -42,60 +44,60 @@ const EnterLocation = () => {
     }
 
   return (
-    <Background>
-        <div className='main-map-div show-map-active'>
-            <div className='map-div hidden lg:block'>
+    <MobileBackground title={"Select Courier"}>
+        <div className='w-full h-full flex items-center justify-end px-5 py-8'>
+            <div className='relative w-full h-full top-0 left-0 flex items-center justify-center rounded-2xl border-2 border-[#F95C29] overflow-hidden'>
                 <img
                     src={mapBg} 
-                    className='map-background' 
+                    className=' w-full h-full object-cover' 
                     alt='background' 
                 />
-            </div>
 
-            <div
-                className='main-location-enter-div'
-            >
-                <div className='enter-location-div'>
-                    <p className='heading'>
-                        Where is it going?
-                    </p>
-                    <div className='location-main-div'>
-                        <p className='red-pin'>
-                            <FaMapPin />
+                <div
+                    className='absolute left-0 bottom-2 w-full px-2 h-fit z-10'
+                >
+                    <div className='shadow-green w-full h-fit p-3 bg-white rounded-2xl mb-5'>
+                        <p className='text-left text-xl font-semibold'>
+                            Where is it going?
                         </p>
-                        <div className='text-div'>
-                            <input
-                                type='text'
-                                placeholder='Current Location'
-                                className='location-input'
-                                value={pickDropPoints.pickUp}
-                                onChange={e => setPickDropPoints(prev => ({ ...prev, pickUp: e.target.value}))}
-                            />
+                        <div className='mt-4 w-full flex items-center justify-between'>
+                            <p className='w-[1.5rem] flex items-center justify-center text-2xl text-green-500'>
+                                <FaMapPin />
+                            </p>
+                            <div className='w-[calc(100%-2rem)] bg-[#E6FFE8] rounded-lg overflow-hidden'>
+                                <input
+                                    type='text'
+                                    placeholder='Current Location'
+                                    className='w-full h-10 bg-transparent focus:outline-none px-3'
+                                    value={pickDropPoints.pickUp}
+                                    onChange={e => setPickDropPoints(prev => ({ ...prev, pickUp: e.target.value}))}
+                                />
+                            </div>
+                        </div>
+                        <div className='mt-4 w-full flex items-center justify-between'>
+                            <p className='w-[1.5rem] flex items-center justify-center text-2xl text-red-500'>
+                                <FaMapPin />
+                            </p>
+                            <div className='w-[calc(100%-2rem)] bg-[#E6FFE8] rounded-lg overflow-hidden'>
+                                <input
+                                    type='text'
+                                    placeholder='Current Location'
+                                    className='w-full h-10 bg-transparent focus:outline-none px-3'
+                                    value={pickDropPoints.drop}
+                                    onChange={e => setPickDropPoints(prev => ({ ...prev, drop: e.target.value}))}
+                                />
+                            </div>
                         </div>
                     </div>
-                    <div className='location-main-div'>
-                        <p className='green-pin'>
-                            <FaMapPin />
-                        </p>
-                        <div className='text-div'>
-                            <input
-                                type='text'
-                                placeholder='Current Location'
-                                className='location-input'
-                                value={pickDropPoints.drop}
-                                onChange={e => setPickDropPoints(prev => ({ ...prev, drop: e.target.value}))}
-                            />
-                        </div>
-                    </div>
+
+                    <GradientBtn
+                        text={"Continue"} 
+                        onClickHandler={handleClick} 
+                    />
                 </div>
-
-                <GradientBtn
-                    text={"Continue"} 
-                    onClickHandler={handleClick} 
-                />
             </div>
         </div>
-    </Background>
+    </MobileBackground>
   )
 }
 
